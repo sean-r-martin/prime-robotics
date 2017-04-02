@@ -4,7 +4,11 @@
   "description": "### Coding Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "check-node-version --node '>= 6.7.0' && nodemon server/start.js",
+    "build": "webpack -w",
+    "build": "check-node-version --node '>= 6.7.0' && webpack",
+    "build-watch": "check-node-version --node '>= 6.7.0' && webpack -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,23 @@
   "bugs": {
     "url": "https://github.com/sean-r-martin/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/sean-r-martin/react-boilerplate#readme"
+  "homepage": "https://github.com/sean-r-martin/react-boilerplate#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "check-node-version": "^2.0.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.3.2"
+  }
 }

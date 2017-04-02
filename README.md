@@ -1,6 +1,4 @@
-# react-boilerplate
+# React Boilerplate code
 
-### Coding Challenge
-
-Purpose:
+#### Purpose:
 * boilerplate code for future React projects.
