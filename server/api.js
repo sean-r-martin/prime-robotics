@@ -1,8 +1,5 @@
-const router = require('express').Router();
+'use strict';
 
-// router.use('/', (req, res, next) => {
-//   res.send('Welcome!')
-//   next();
-// })
+const router = require('express').Router();
 
 module.exports = router;
