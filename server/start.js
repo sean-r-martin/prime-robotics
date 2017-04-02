@@ -3,7 +3,8 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const router = require('./api')
+const router = require('./api');
+const db = require('../db');
 
 const morgan = require('morgan');
 const logger = morgan('dev');
@@ -36,6 +37,24 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500).send(err.message || 'Internal server error.');
 });
 
-app.listen(1337, function () {
-  console.log("Server is listening on port 1337");
-});
+function listenOnPort() {
+  const port = 1337
+  app.listen(port, function () {
+    console.log('The server is listening on port', port);
+  });
+}
+
+function syncDatabase() {
+  db.sync(
+    {force: true}
+  )
+  .then(function () {
+    console.log('Synchronized the database');
+    listenOnPort();
+  })
+  .catch(function (err) {
+    console.error(err, err.stack);
+  });
+}
+
+syncDatabase();
