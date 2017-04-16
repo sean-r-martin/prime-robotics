@@ -38,7 +38,7 @@ app.use(function (err, req, res, next) {
 });
 
 function listenOnPort() {
-  const port = 1337
+  const port = process.env.PORT || 1337;
   app.listen(port, function () {
     console.log('The server is listening on port', port);
   });
