@@ -1,4 +1,4 @@
-# React Boilerplate code
+# Web Application Boilerplate Code
 
 #### Purpose:
-* boilerplate code for future React projects.
+* Boilerplate code for future Web Application projects.

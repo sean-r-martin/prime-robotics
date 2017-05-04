@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "web-app-boilerplate",
   "version": "1.0.0",
-  "description": "React Boilerplate",
+  "description": "Web App Boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,14 +30,6 @@
     "path": "^0.12.7",
     "pg": "^6.1.5",
     "pg-hstore": "^2.3.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0",
-    "redux": "^3.6.0",
-    "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.2.0",
     "sequelize": "^3.30.4"
   },
   "devDependencies": {
