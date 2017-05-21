@@ -22,7 +22,7 @@ app.use('/api', router);
 
 // if no routes match, this line servers up index.html
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public'));
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 router.use(function (req, res, next) {
