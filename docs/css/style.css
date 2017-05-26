@@ -46,7 +46,6 @@ nav {
 
 #landing-page-section {
   height: calc(100vh - 100px);
-  align-items: center;
   position: relative; }
 
 #landing-page-overlay {
@@ -57,9 +56,8 @@ nav {
   left: 0;
   display: flex;
   justify-content: center;
-  height: calc(100vh - 100px);
-  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #f0f0f0;
   text-shadow: 3px 3px black; }
 
@@ -67,7 +65,7 @@ nav {
   font-size: 60px; }
 
 #landing-page-mission {
-  font-size: 35px; }
+  font-size: 36px; }
 
 #purchase-options-section {
   height: 100px;
@@ -79,7 +77,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid lightblue;
   border-top-width: 0;
   border-bottom-width: 0;
   color: #f0f0f0;
@@ -99,7 +97,7 @@ nav {
 #product-info-section {
   display: flex;
   flex-wrap: wrap;
-  height: calc(125vw / 3);
+  height: calc((100vw * (10/16) / 3) * 2);
   background-color: black; }
 
 .product-item {
@@ -109,40 +107,39 @@ nav {
   position: relative; }
 
 .picture-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
   color: #f0f0f0;
-  text-shadow: 3px 3px black;
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
+  text-shadow: 3px 3px black; }
   .picture-overlay:hover {
     background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    cursor: hand; }
+    cursor: pointer; }
 
 #featured-bots-section {
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  background: url("/img/computer-code-background.jpg") no-repeat center center;
+  background-size: cover; }
 
 #featured-bots-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100vw;
-  background-color: #373737;
+  background-color: rgba(0, 0, 0, 0.7);
   color: #f0f0f0; }
   #featured-bots-content h1 {
-    text-align: center;
-    font-size: 55px;
     flex-basis: 100vw;
-    margin: 50px 0 0 0; }
+    margin: 50px 0 0 0;
+    text-align: center;
+    font-size: 55px; }
 
 .featured-bot {
   width: 300px;
@@ -152,7 +149,10 @@ nav {
     text-align: center;
     font-size: 35px; }
   .featured-bot p {
-    font-family: 'Hind Vadodara', sans-serif; }
+    font-family: 'Hind Vadodara', sans-serif;
+    color: lightblue; }
+  .featured-bot img:hover {
+    cursor: pointer; }
 
 .bot-image {
   width: 300px;
@@ -160,27 +160,26 @@ nav {
   box-shadow: 3px 3px 3px #000000; }
 
 #contact-info-section {
-  font-family: 'Hind Vadodara', sans-serif;
-  background-color: #004da7;
+  background-color: #003D87;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 #contact-info-content {
-  width: 60vw;
-  min-height: 200px;
-  margin: 100px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  width: 60vw;
+  margin: 100px 0; }
 
 .contact-info-item {
+  font-family: 'Hind Vadodara', sans-serif;
   width: 30vw;
   min-width: 350px;
   height: 100px;
+  margin: 20px 0;
   color: lightblue;
-  font-size: 18px;
-  margin: 20px 0; }
+  font-size: 18px; }
 
 .contact-info-title {
   font-size: 24px;
@@ -193,15 +192,17 @@ nav {
     color: #f0f0f0; }
 
 footer {
-  background-color: black;
-  color: #f0f0f0;
-  height: 30px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 20px;
+  background-color: #003D87;
+  color: #f0f0f0; }
+  footer p {
+    margin: 20px 20px; }
 
 @media (max-width: 1020px) {
   #product-info-section {
-    height: calc(150vw * 10 / 16); }
+    height: calc((100vw * (10/16) / 2) * 3); }
   .product-item {
     min-width: 50%; } }
 
@@ -209,5 +210,15 @@ footer {
   #product-info-section {
     height: auto; }
   .product-item {
-    min-width: 100vw;
-    height: 62vw; } }
+    min-width: 100%;
+    height: calc(100vw * (10/16)); }
+  #purchase-options-section {
+    flex-wrap: wrap;
+    height: auto; }
+  .purchase-option {
+    width: 100%;
+    border-top-width: 1px;
+    border-right-width: 0;
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    padding: 20px 0; } }
