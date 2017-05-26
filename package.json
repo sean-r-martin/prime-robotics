@@ -1,16 +1,14 @@
 {
-  "name": "web-app-boilerplate",
+  "name": "prime-robotics",
   "version": "1.0.0",
-  "description": "Web App Boilerplate",
+  "description": "Mock technology website",
   "main": "index.js",
   "scripts": {
     "test": "check-node-version --node '>= 6.7.0' && mocha --compilers js:babel-register app/**/*.test.js db/**/*.test.js server/**/*.test.js",
     "test-watch": "check-node-version --node '>= 6.7.0' &&  mocha --compilers js:babel-register --watch app/**/*.test.js db/**/*.test.js server/**/*.test.js",
     "start": "check-node-version --node '>= 6.7.0' && nodemon server/start.js",
-    "build": "check-node-version --node '>= 6.7.0' && webpack",
-    "build-watch": "check-node-version --node '>= 6.7.0' && webpack -w",
-    "build-css": "node-sass public/css/style.scss -o public/css",
-    "build-watch-css": "node-sass -w public/css/style.scss -o public/css"
+    "build": "check-node-version --node '>= 6.7.0' && webpack -w",
+    "build-css": "node-sass -w docs/css/style.scss -o docs/css"
   },
   "repository": {
     "type": "git",
