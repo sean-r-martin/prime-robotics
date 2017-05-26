@@ -19,8 +19,9 @@ nav {
   top: 0;
   left: 0;
   display: flex;
-  height: 70px;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  min-height: 70px;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
   z-index: 10; }
@@ -34,15 +35,16 @@ nav {
     nav a:hover {
       color: lightblue; }
 
-#company-title {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  height: 70px;
-  font-size: 25px;
+.navbar-background-change {
+  background-color: black; }
+
+.navbar-section {
   display: flex;
-  align-items: center;
-  color: #f0f0f0; }
+  justify-content: center; }
+
+#navbar-company-title {
+  color: #f0f0f0;
+  margin: auto 20px; }
 
 #landing-page-section {
   height: calc(100vh - 100px);
@@ -62,10 +64,14 @@ nav {
   text-shadow: 3px 3px black; }
 
 #landing-page-slogan {
-  font-size: 60px; }
+  font-size: 60px;
+  text-align: center;
+  margin: 20px; }
 
 #landing-page-mission {
-  font-size: 36px; }
+  font-size: 32px;
+  text-align: center;
+  margin: 20px; }
 
 #purchase-options-section {
   height: 100px;
@@ -170,7 +176,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   width: 60vw;
-  margin: 100px 0; }
+  margin: 60px 0; }
 
 .contact-info-item {
   font-family: 'Hind Vadodara', sans-serif;
@@ -212,13 +218,17 @@ footer {
   .product-item {
     min-width: 100%;
     height: calc(100vw * (10/16)); }
-  #purchase-options-section {
-    flex-wrap: wrap;
-    height: auto; }
-  .purchase-option {
-    width: 100%;
-    border-top-width: 1px;
-    border-right-width: 0;
-    border-bottom-width: 1px;
-    border-left-width: 0;
-    padding: 20px 0; } }
+  #contact-info-content {
+    width: 100vw; }
+  .contact-info-item {
+    min-width: 0;
+    flex-basis: 100vw; }
+  .navbar-section {
+    flex-basis: 100vw;
+    margin: 10px 0; }
+  body {
+    background-size: auto; } }
+
+@media (max-height: 450px) {
+  nav {
+    background-color: black; } }

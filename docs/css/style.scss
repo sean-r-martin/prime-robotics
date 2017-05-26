@@ -1,6 +1,7 @@
 $lightgray: #f0f0f0;
 $blue: #003D87;
 
+// general styling
 html {
   box-sizing: border-box;
   font-family: 'Iceland', cursive;
@@ -21,14 +22,15 @@ body {
   background-attachment: fixed;
 }
 
-
+// navbar styling
 nav {
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
-  height: 70px;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  min-height: 70px;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
   z-index: 10;
@@ -45,17 +47,21 @@ nav {
   }
 }
 
-#company-title {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  height: 70px;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  color: $lightgray;
+.navbar-background-change {
+  background-color: rgba(0, 0, 0, 1);
 }
 
+.navbar-section {
+  display: flex;
+  justify-content: center;
+}
+
+#navbar-company-title {
+  color: $lightgray;
+  margin: auto 20px;
+}
+
+// landing page styling
 #landing-page-section {
   height: calc(100vh - 100px);
   position: relative;
@@ -77,12 +83,17 @@ nav {
 
 #landing-page-slogan {
   font-size: 60px;
+  text-align: center;
+  margin: 20px;
 }
 
 #landing-page-mission {
-  font-size: 36px;
+  font-size: 32px;
+  text-align: center;
+  margin: 20px;
 }
 
+// purchase options styling
 #purchase-options-section {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -115,6 +126,7 @@ nav {
   }
 }
 
+// product info styling
 #product-info-section {
   display: flex;
   flex-wrap: wrap;
@@ -148,6 +160,7 @@ nav {
   }
 }
 
+// featured bot styling
 #featured-bots-section {
   display: flex;
   background: url('/img/computer-code-background.jpg') no-repeat center center;
@@ -194,6 +207,7 @@ nav {
   box-shadow: 3px 3px 3px #000000;
 }
 
+// contact info styling
 #contact-info-section {
   background-color: $blue;
   display: flex;
@@ -206,7 +220,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   width: 60vw;
-  margin: 100px 0;
+  margin: 60px 0;
 }
 
 .contact-info-item {
@@ -234,6 +248,7 @@ nav {
   }
 }
 
+// footer styling
 footer {
   display: flex;
   align-items: center;
@@ -245,6 +260,7 @@ footer {
   }
 }
 
+// media queries
 @media (max-width: 1020px) {
   #product-info-section {
     height: calc((100vw * (10/16) / 2) * 3); // = product-info-section width * (picture height / picture width) * product-item width percentage of 50% * three rows of pictures
@@ -262,16 +278,24 @@ footer {
     min-width: 100%;
     height: calc(100vw * (10/16)); // 100 (10/16) = product-info-section width * (picture height / picture width)
   }
-  #purchase-options-section {
-    flex-wrap: wrap;
-    height: auto;
+  #contact-info-content {
+    width: 100vw;
   }
-  .purchase-option {
-    width: 100%;
-    border-top-width: 1px;
-    border-right-width: 0;
-    border-bottom-width: 1px;
-    border-left-width: 0;
-    padding: 20px 0;
+  .contact-info-item {
+    min-width: 0;
+    flex-basis: 100vw;
+  }
+  .navbar-section {
+    flex-basis: 100vw;
+    margin: 10px 0;
+  }
+  body {
+    background-size: auto;
+  }
+}
+
+@media (max-height: 450px) {
+  nav {
+  background-color: rgba(0, 0, 0, 1);
   }
 }
