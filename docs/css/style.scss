@@ -31,7 +31,7 @@ nav {
   flex-wrap: wrap;
   min-height: 70px;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
   z-index: 10;
   a {
@@ -63,7 +63,7 @@ nav {
 
 // landing page styling
 #landing-page-section {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   position: relative;
 }
 
@@ -82,21 +82,20 @@ nav {
 }
 
 #landing-page-slogan {
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
-  margin: 20px;
+  margin: 10px 20px;
 }
 
 #landing-page-mission {
-  font-size: 32px;
+  font-size: 29px;
   text-align: center;
-  margin: 20px;
+  margin: 10px 20px;
 }
 
 // purchase options styling
 #purchase-options-section {
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.7);
+  height: 70px;
   display: flex;
 }
 
@@ -109,7 +108,7 @@ nav {
   border-top-width: 0;
   border-bottom-width: 0;
   color: $lightgray;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   text-shadow: 2px 2px black;
   font-size: 20px;
   a {
@@ -118,7 +117,7 @@ nav {
     font-size: 30px;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     a {
       color: lightblue;
