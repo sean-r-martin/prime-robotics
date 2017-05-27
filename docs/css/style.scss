@@ -17,7 +17,7 @@ p {
 
 body {
   margin: 0;
-  background-image: url('/img/background.jpg');
+  background-image: url('../img/background.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -163,7 +163,7 @@ nav {
 // featured bot styling
 #featured-bots-section {
   display: flex;
-  background: url('/img/computer-code-background.jpg') no-repeat center center;
+  background: url('../img/computer-code-background.jpg') no-repeat center center;
   background-size: cover;
 }
 

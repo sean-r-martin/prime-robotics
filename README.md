@@ -1,4 +1,4 @@
-# Web Application Boilerplate Code
+# Prime Robotics
 
 #### Purpose:
-* Boilerplate code for future Web Application projects.
+* Mock landing page for a technology company.
